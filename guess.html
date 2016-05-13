@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+	function checkAnswers () {
+		var i = 1
+	var answer = Math. floor(Math.random() * 100) + 1;
+	while(i != 0){
+	var userAnswer = parseInt(prompt('Введите число от 1 до 100. Если хотите выйти из игры введите 000'));
+	if((userAnswer >=1) && (userAnswer <= 100)) {
+		if(answer == userAnswer){
+			alert('Вы угадали! Поздравляю!!!');
+			alert('Количество попыток: ' + i);
+			i = 0;
+		} else if(answer > userAnswer){
+			alert('Не угадали! Ваше число меньше...');
+			i++;
+		}else {
+			alert('Не угадали! Ваше число больше...');
+			i++;
+		}
+	}else{
+		if (userAnswer == 000) {
+			i--;
+			alert('Досвидания! Количество попыток:' + i);
+			break
+		}else{
+		alert('Вы ввели неккоректное число!');
+	}
+	}
+}
+}
+</script>
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle.html">Загадки</a></li>
+			<li><a href="guess.html">Угадайка</a></li>
+			<li><a href="guessMult.html">Угадайка мультиплеер</a></li>
+		</ul>    	
+	</div>
+</div>
+    
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Угадайка</h2>
+	</div>
+	<div id="content">
+		<p>Я загадал число от 1 до 100. Попробуй, отгадай!</p>
+		</br>
+		<p>У тебя есть неограниченное количество попыток. После каждой попытки ты узнаешь, угадал ты или нет, твоё число больше или меньше. Цель - угадать число за наименьшее количество попыток. Если хочешь выйти из игры, введи 000</p>
+		</br>
+		<p>Удачи тебе!</p>
+		</br>
+		<input type="button" value="Начать игру" onClick="checkAnswers()"/>
+	
+		
+		
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+
+</body>
+</html>
